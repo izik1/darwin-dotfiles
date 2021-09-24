@@ -17,4 +17,12 @@ echo "installing base Brew bundle..."
 
 brew bundle --file "$HOME/Brewfile-base"
 
+echo "installing Rust... Prepare for prompts"
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo "initializing config..."
+
+"$HOME/scripts/mac.config.sh"
+
 echo "Finished"
