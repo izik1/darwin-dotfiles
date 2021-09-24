@@ -18,4 +18,3 @@ echo "installing base Brew bundle..."
 brew bundle --file "$HOME/Brewfile-base"
 
 echo "Finished"
-
