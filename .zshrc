@@ -5,6 +5,13 @@ alias cat="bat"
 
 eval "$(starship init zsh)"
 
+eval $(thefuck --alias)
+# Mondays:
+eval $(thefuck --alias FUCK)
+# lighthearted
+eval $(thefuck --alias dewit)
+eval $(thefuck --alias shipit)
+
 source /usr/local/share/antigen/antigen.zsh
 
 antigen init ~/.antigenrc

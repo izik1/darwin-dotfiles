@@ -13,3 +13,9 @@ defaults write com.apple.dock "mru-spaces" -bool "false"
 
 # we modified the dock, so kill it
 killall Dock
+
+# ITerm
+
+defaults write com.apple.Terminal "Default Window Settings" Pro
+
+# todo: fonts
