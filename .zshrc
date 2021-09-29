@@ -10,6 +10,7 @@ eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 # lighthearted
 eval $(thefuck --alias dewit)
+eval $(thefuck --alias doit)
 eval $(thefuck --alias shipit)
 
 source /usr/local/share/antigen/antigen.zsh
