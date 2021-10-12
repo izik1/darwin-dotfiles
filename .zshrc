@@ -13,6 +13,8 @@ eval $(thefuck --alias dewit)
 eval $(thefuck --alias doit)
 eval $(thefuck --alias shipit)
 
+fpath+=("$HOME/completions")
+
 source /usr/local/share/antigen/antigen.zsh
 
 antigen init ~/.antigenrc
