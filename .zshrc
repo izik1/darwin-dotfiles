@@ -2,6 +2,8 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 alias ls="exa"
 alias cat="bat"
+alias cf="cargo +nightly fmt"
+alias cck="cargo check"
 
 eval "$(starship init zsh)"
 
