@@ -4,6 +4,7 @@ alias ls="exa"
 alias cat="bat"
 alias cf="cargo +nightly fmt"
 alias cck="cargo check"
+alias cr="cargo run"
 
 eval "$(starship init zsh)"
 
