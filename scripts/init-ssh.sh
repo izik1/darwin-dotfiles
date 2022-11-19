@@ -7,7 +7,7 @@ fi
 
 echo "generating ssh key, you will be prompted to enter a password"
 
-ssh-keygen -t ed25519 -C "sross@qpq.io" -f "$HOME/.ssh/id_ed25519"
+ssh-keygen -t ed25519 -f "$HOME/.ssh/id_ed25519"
 
 if [ $? != 0 ];then
     echo "key generation failed"
@@ -17,7 +17,7 @@ fi
 # start ssh-agent
 eval "$(ssh-agent -s)"
 
-ssh-add -K ~/.ssh/id_ed25519
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 if [ $? != 0 ];then
     echo "couldn't add key"

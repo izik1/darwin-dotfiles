@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 alias ls="exa"
@@ -18,6 +20,9 @@ eval $(thefuck --alias shipit)
 
 fpath+=("$HOME/completions")
 
-source /usr/local/share/antigen/antigen.zsh
+source "$(brew --prefix)/share/antigen/antigen.zsh"
 
 antigen init ~/.antigenrc
+
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
