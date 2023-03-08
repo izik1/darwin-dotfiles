@@ -1,9 +1,9 @@
 {
     "workbench.colorTheme": "Dracula Soft",
     "files.autoSave": "afterDelay",
-    "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'VictorMono-Regular', 'JetBrains Mono', Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "line-thin",
     "editor.find.autoFindInSelection": "multiline",
@@ -22,5 +22,52 @@
     "rust-analyzer.imports.merge.glob": false,
     "editor.minimap.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.accessibilitySupport": "off"
+    "editor.accessibilitySupport": "off",
+    "rust-analyzer.assist.emitMustUse": true,
+    "rust-analyzer.completion.snippets.custom": {
+        "Arc::new": {
+            "postfix": "arc",
+            "body": "Arc::new(${receiver})",
+            "requires": "std::sync::Arc",
+            "description": "Put the expression into an `Arc`",
+            "scope": "expr"
+        },
+        "Rc::new": {
+            "postfix": "rc",
+            "body": "Rc::new(${receiver})",
+            "requires": "std::rc::Rc",
+            "description": "Put the expression into an `Rc`",
+            "scope": "expr"
+        },
+        "Box::pin": {
+            "postfix": "pinbox",
+            "body": "Box::pin(${receiver})",
+            "requires": "std::boxed::Box",
+            "description": "Put the expression into a pinned `Box`",
+            "scope": "expr"
+        },
+        "Ok": {
+            "postfix": "ok",
+            "body": "Ok(${receiver})",
+            "description": "Wrap the expression in a `Result::Ok`",
+            "scope": "expr"
+        },
+        "Err": {
+            "postfix": "err",
+            "body": "Err(${receiver})",
+            "description": "Wrap the expression in a `Result::Err`",
+            "scope": "expr"
+        },
+        "Some": {
+            "postfix": "some",
+            "body": "Some(${receiver})",
+            "description": "Wrap the expression in an `Option::Some`",
+            "scope": "expr"
+        }
+    },
+    "rust-analyzer.inlayHints.expressionAdjustmentHints.hideOutsideUnsafe": true,
+    "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "always",
+    "rust-analyzer.interpret.tests": true,
+    "rust-analyzer.lens.references.adt.enable": true,
+    "rust-analyzer.lru.capacity": 1024
 }

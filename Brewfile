@@ -55,8 +55,6 @@ cask "logitech-options"
 cask "rectangle"
 cask "slack"
 cask "spotify"
-cask "swift"
 cask "visual-studio-code"
 cask "zoom"
-mas "MiniPlay", id: 936243210
 mas "Xcode", id: 497799835

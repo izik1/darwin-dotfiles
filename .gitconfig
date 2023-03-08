@@ -28,3 +28,15 @@
     colorMoved = default
 [push]
 	autoSetupRemote = true
+[alias]
+	dbgpoint = "![ -z \"$1\" ] && \
+		  echo 'error: failed to provide name' || ( \
+	        git stash push && \
+	        git stash apply && \
+		git commit -am \"wip(debug): $1\" && \
+		git tag $1 && \
+		git reset --hard HEAD~ && \
+		git stash apply --index && \
+		git stash drop || \
+		echo 'command failed, please restore to nearest working state' \
+		); :"
