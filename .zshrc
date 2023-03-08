@@ -11,8 +11,6 @@ alias cr="cargo run"
 alias xcode-13-2="sudo xcode-select -s /Applications/Xcode\ 13.2.app/Contents/Developer"
 alias xcode-latest="sudo xcode-select -s /Applications/Xcode.app/Contents/Developer"
 
-eval "$(starship init zsh)"
-
 eval $(thefuck --alias)
 # Mondays:
 eval $(thefuck --alias FUCK)
@@ -27,6 +25,9 @@ source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 
 antidote load
 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
+eval "$(starship init zsh)"
