@@ -1,6 +1,8 @@
 path=('/opt/homebrew/opt/openssl@3/bin' $path)
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export EDITOR=nvim
+
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 alias ls="exa"
